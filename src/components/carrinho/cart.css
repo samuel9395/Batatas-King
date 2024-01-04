@@ -1,0 +1,136 @@
+.carrinho-container {
+    background-color: #f49a40;
+    color: #ffffff;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 700;
+    display: inline-block;
+    flex-direction: row;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    right: 0.6%;
+    transition: right 0.3s ease-in-out;
+    width: 100%;
+    height: 100vh;
+    z-index: 1000; 
+    text-align: center;
+  }
+
+  .headHome {
+    display: contents;
+  }
+
+  .headHome .logo {
+    display: flex;
+    align-items: left;
+    margin-top: -1rem;
+  }
+
+  ul {
+    padding: 3px ;
+    text-decoration: none;
+  }
+
+  .item {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin-left: 513px;
+  }
+  
+  .igual {
+    margin-top: -35px;
+    margin-left: 73px;
+  }
+
+  .preco {
+    display: flex;
+    justify-content: left;
+    margin-top: -35px;
+    margin-left: 721px;
+  }
+
+  .total {
+    display: flex;
+    justify-content: center;
+    margin-right: 160px;
+    margin-top: 30px;
+  }
+
+  .finalizar {
+    margin-top: 1px;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 700;
+    background-color: #f49a40;
+    color: #ffffff;
+    border: solid 1px;
+  }
+
+  .iconQtd {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -35px;
+    margin-left: 295px;
+    padding: 0;
+  }
+  .iconDiminuirItem {
+    background-color: #f49a40;
+    color: #ffffff;
+    border: solid 1px;
+    margin-right: 5px;
+  }
+  .iconAumentarItem {
+    background-color: #f49a40;
+    color: #ffffff;
+    border: solid 1px;
+    margin-left: 5px;
+  }
+
+  @media screen and (max-width: 600px) {
+    .item {
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: left;
+      margin-left: 50px;
+    }  
+    .igual {
+      margin-top: -35px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 28px;
+    }
+    .preco {
+      display: flex;
+      justify-content: left;
+      margin-top: -35px;
+      margin-left: 240px;
+    }
+    .total {
+      display: flex;
+      justify-content: center;
+      margin-right: 150px;
+      margin-top: 40px;
+    }  
+    .iconQtd {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: -35px;
+      margin-left: 270px;
+      padding: 0;
+    }
+    .iconDiminuirItem {
+      border: solid 1px;
+      margin-right: 5px;
+    }
+    .iconAumentarItem {
+      margin-left: 5px;
+    }
+    .finalizar {
+      border: solid 2px;
+    }
+  }
