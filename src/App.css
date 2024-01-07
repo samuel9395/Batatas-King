@@ -1,6 +1,7 @@
 .App {
     background: linear-gradient(to bottom, #d89d65, white);
     width: 100%;
+    height: 100%;
     margin: 0; 
     padding: 0;
     display: flex;
@@ -10,6 +11,7 @@
 
 @media screen and (max-width: 700px) {
     .App {
-    width: 100vw;
+    width: 100%;
+    height: 100%;
     }
 }

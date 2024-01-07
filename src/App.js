@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './components/home/home';
 import Produtos from './components/produtos/produto';
 import Carrinho from './components/carrinho/cart';
+//import Cadastro from './components/cadastro/cadastro';
 import '../src/App.css';
 
 function App() {
@@ -26,14 +27,19 @@ function App() {
       <div className="App">
         <header className="App-header">
           <Routes>
-            <Route path="/" element={<Home toggleCarrinho={toggleCarrinho} totalItens={carrinhoItens.length} />} />
-            <Route path="/carrinho" element={<Carrinho carrinhoItens={carrinhoItens} setCarrinhoItens={setCarrinhoItens} />} />
+            <Route 
+              path="/" 
+              element={<Home toggleCarrinho={toggleCarrinho} totalItens={carrinhoItens.length} />} />
+            <Route 
+              path="/carrinho" 
+              element={<Carrinho carrinhoItens={carrinhoItens} setCarrinhoItens={setCarrinhoItens} />} />
           </Routes>
          
           <Produtos addToCart={addToCart} />
         </header>
       </div>
     </Router>
+
   );
 }
 

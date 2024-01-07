@@ -7,6 +7,14 @@ import { Link } from "react-router-dom";
 import "../home/home.css";
 
 function Home({ toggleCarrinho, totalItens }) {
+
+const numeroWhatsapp = "+5511967225300"; 
+const mensagem = "Olá, gostaria de fazer um pedido direto.\nGostaria de ver o cardápio por favor...";
+const linkWhatsapp = `https://wa.me/${numeroWhatsapp}?text=${encodeURIComponent(mensagem)}`;
+
+const linkInstagram = "https://www.instagram.com/batata_king_01/";
+
+
   return (
     <div id="head">
       <h1>BATATA KING</h1>
@@ -19,12 +27,12 @@ function Home({ toggleCarrinho, totalItens }) {
             <span className="itensCarrinho">{totalItens}</span>
             <img className="imgCart" src={cart} alt="cart" />
         </Link>
-        <div className="zap" id="btnZap">
+        <a href={linkWhatsapp} target="_blank" rel="noopener noreferrer"className="zap" id="btnZap" >
           <img src={zap} alt="whatsapp" />
-        </div>
-        <div className="insta" id="btnInsta">
+        </a>
+        <a href={linkInstagram} target="_blank" rel="noopener noreferrer"className="insta" id="btnInsta">
           <img src={insta} alt="instagram" />
-        </div>
+        </a>
       </div>
       <p className="fim" />
     </div>

@@ -1,0 +1,72 @@
+Documentação do Projeto - Batata King
+
+**Introdução**
+
+Este documento serve como uma documentação básica para o projeto Batata King, um aplicativo web desenvolvido em React para a venda de batatas recheadas. O projeto inclui funcionalidades como visualização de produtos, adição ao carrinho, visualização do carrinho e finalização de pedidos.
+
+**Estrutura do Projeto**
+
+O projeto está estruturado de acordo com as seguintes pastas e arquivos;
+
+/src: Contém os arquivos-fonte do projeto.
+/components: Armazena os componentes React utilizados no projeto.
+/home: Contém o componente Home, que representa a página inicial.
+/produtos: Contém o componente Produtos, que exibe a lista de produtos.
+/carrinho: Contém o componente Carrinho, que exibe o carrinho de compras.
+/cadastro: Contém o componente Cadastro, utilizado para coletar informações do cliente.
+/assets: Armazena imagens e outros recursos utilizados no projeto.
+dadosProdutos.js: Arquivo contendo a lista de produtos disponíveis.
+index.css e App.css: Arquivos de estilização global.
+
+**Componentes Principais**
+
+- App.js
+  O componente principal do projeto, responsável por renderizar a aplicação. Ele utiliza o React Router para gerenciar as rotas e inclui o componente Home, Carrinho, e Produtos.
+
+- Home.js
+  Representa a página inicial do aplicativo, exibindo o nome da empresa, uma breve descrição, e links para o carrinho e redes sociais. Também exibe o logotipo e a quantidade de itens no carrinho.
+
+- Produtos.js
+  Exibe a lista de produtos disponíveis para compra. Cada produto é representado por um bloco com imagem, nome, descrição, preço e um botão para adicionar ao carrinho.
+
+- Carrinho.js
+  Mostra os itens adicionados ao carrinho, permitindo aumentar, diminuir a quantidade ou remover itens individualmente. Exibe o total do carrinho e oferece a opção de finalizar a compra.
+
+- Cadastro.js
+  Componente responsável por coletar informações do cliente, como nome, telefone, endereço, etc. Após o preenchimento correto dos dados, oferece um botão para finalizar a compra.
+
+**Funcionalidades**
+
+1.Adição ao Carrinho:
+- Ao clicar no botão "✓" de um produto em Produtos.js, o produto é adicionado ao carrinho.
+  
+2.Visualização do Carrinho:
+- O componente Carrinho.js exibe os itens no carrinho, permitindo a manipulação da quantidade e remoção de itens.
+  
+3.Finalização do Pedido:
+- A finalização do pedido ocorre no componente Cadastro.js, onde o cliente fornece suas informações e, ao clicar em  "Enviar", é gerada uma mensagem com os detalhes do pedido e aberto um link para o WhatsApp para confirmar o pedido.
+
+**Como Executar o Projeto**
+
+Para executar o projeto, siga os seguintes passos:
+
+1.Clone o repositório:
+
+bash ->
+git clone [https://github.com/samuel9395/Batatas-King]
+
+2.Instale as dependências:
+
+bash ->
+npm install
+
+3.Inicie a aplicação:
+
+bash-> 
+npm start
+
+A aplicação estará disponível em https://batatasking.netlify.app/
+
+**Conclusão**
+
+O projeto Batata King oferece uma interface amigável para a compra de batatas recheadas. A estrutura do código facilita a manutenção e expansão futura do aplicativo. Novas funcionalidades podem ser adicionadas para aprimorar a experiência do usuário.

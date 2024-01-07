@@ -18,19 +18,19 @@
 h1 {
     position: relative;
     top: 15px;
-    font-size: 2em; 
-    font-family: Jomhuria;
-    color: white;
-    text-align: center;
+    display: flex;
+    justify-content: center; 
+    font-size: 1.5em; 
+    color:white;
     width: 100%;
 }
 
 h5 {
-    position: relative;
-    top: -1px;
     display: flex;
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
+    position: relative;
+    top: -1px; 
     font-size: 0.8em; 
     color:white;
     width: 100%;
@@ -172,7 +172,7 @@ img {
     }
     h1 {
         position: relative;
-        top: 15px;
+        top: 3px;
         font-size: 2em; 
         font-family: Jomhuria;
         color: white;
@@ -181,6 +181,7 @@ img {
     }
 
     h5{
+        top: -20px;
         font-size: 10px;
         text-align: center;
     }
@@ -196,7 +197,7 @@ img {
         top: -75px;
     }
     .cart {
-        margin-top: 10px;
+        margin-top: -20px;
         position: relative;
         display: flex;
         justify-content: left;
@@ -212,7 +213,7 @@ img {
         margin-top: 55px;
         display: flex;
         width: 100%;
-        margin-left: 30px;
+        margin-left: 25px;
     }
     .zap {
         top: 10px;
@@ -232,7 +233,7 @@ img {
     }
     
     .fim {
-        margin-top: 4px;
+        margin-top: -7px;
         border-bottom: solid 3px #ffffff;
     }
 

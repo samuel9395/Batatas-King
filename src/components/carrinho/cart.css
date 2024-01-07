@@ -1,136 +1,203 @@
 .carrinho-container {
-    background-color: #f49a40;
-    color: #ffffff;
-    font-family: "Inter-Regular", Helvetica;
-    font-weight: 700;
-    display: inline-block;
+  background-color: #f49a40;
+  color: #ffffff;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 700;
+  display: inline-block;
+  flex-direction: row;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  right: 0.6%;
+  transition: right 0.3s ease-in-out;
+  width: 100%;
+  height: 100vh;
+  z-index: 1000; 
+  text-align: center;
+}
+
+.headHome {
+  display: contents;
+}
+
+.headHome h1 h5 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.headHome .logo {
+  display: flex;
+  align-items: left;
+  margin-top: -1rem;
+}
+
+h3 {
+  margin-top: -3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+}
+
+ul {
+  padding: 0px ;
+  text-decoration: none;
+}
+
+.item {
+  margin-top: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  margin-left: 647px;
+}
+
+.igual {
+  margin-top: -35px;
+  margin-left: 0px;
+}
+
+.preco {
+  display: flex;
+  justify-content: left;
+  margin-top: -35px;
+  margin-left: 850px;
+}
+
+.total {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -10px;
+}
+
+.finalizar {
+  margin-top: -7px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 700;
+  background-color: #f49a40;
+  color: #ffffff;
+  border: solid 1px;
+}
+
+.iconQtd {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -70px;
+  margin-left: 260px;
+  padding: 0;
+}
+.qtd{
+  display: flex;
+  margin-top: 25px;
+}
+.iconDiminuirItem {
+  background-color: #f49a40;
+  color: #ffffff;
+  border: solid 1px;
+  margin-right: 5px;
+  border-radius: 50%;
+}
+.iconAumentarItem {
+  background-color: #f49a40;
+  color: #ffffff;
+  border: solid 1px;
+  margin-left: 5px;
+  border-radius: 50%;
+}
+.register {
+  margin-top: -3px;
+}
+
+@media screen and (max-width: 600px) {
+  .carrinho-container {
+    display: block;
     flex-direction: row;
-    justify-content: center;
-    position: fixed;
-    top: 0;
-    right: 0.6%;
-    transition: right 0.3s ease-in-out;
     width: 100%;
-    height: 100vh;
-    z-index: 1000; 
-    text-align: center;
+    height: 100%;
+    font-weight: 400;
   }
-
-  .headHome {
-    display: contents;
-  }
-
-  .headHome .logo {
-    display: flex;
-    align-items: left;
-    margin-top: -1rem;
-  }
-
-  ul {
-    padding: 3px ;
-    text-decoration: none;
-  }
-
-  .item {
+  .headHome h1{
     margin-top: 10px;
     display: flex;
     align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  h3 {
+    margin-top: -13px;
+    color: #ffffff;
+    margin-right: 15px;
+  }
+  ul{
+    margin-top: -25px;
+  }
+  .item {
+    font-size: 13px;
+    display: flex;
+    align-items: center;
     justify-content: left;
-    margin-left: 513px;
-  }
-  
+    margin-left: 60px;
+    margin-top: 2px;
+  }  
   .igual {
-    margin-top: -35px;
-    margin-left: 73px;
+    margin-top: -30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-
   .preco {
     display: flex;
     justify-content: left;
     margin-top: -35px;
-    margin-left: 721px;
+    margin-left: 220px;
   }
-
-  .total {
-    display: flex;
-    justify-content: center;
-    margin-right: 160px;
-    margin-top: 30px;
-  }
-
-  .finalizar {
-    margin-top: 1px;
-    font-family: "Inter-Regular", Helvetica;
-    font-weight: 700;
-    background-color: #f49a40;
-    color: #ffffff;
-    border: solid 1px;
-  }
-
   .iconQtd {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: -35px;
-    margin-left: 295px;
+    margin-top: -43px;
+    margin-left: 240px;
     padding: 0;
   }
+  .qtd{
+    display: flex;
+    margin-top: 5px;
+  }
   .iconDiminuirItem {
-    background-color: #f49a40;
-    color: #ffffff;
-    border: solid 1px;
     margin-right: 5px;
   }
   .iconAumentarItem {
-    background-color: #f49a40;
-    color: #ffffff;
-    border: solid 1px;
     margin-left: 5px;
   }
-
-  @media screen and (max-width: 600px) {
-    .item {
-      margin-top: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: left;
-      margin-left: 50px;
-    }  
-    .igual {
-      margin-top: -35px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-right: 28px;
-    }
-    .preco {
-      display: flex;
-      justify-content: left;
-      margin-top: -35px;
-      margin-left: 240px;
-    }
-    .total {
-      display: flex;
-      justify-content: center;
-      margin-right: 150px;
-      margin-top: 40px;
-    }  
-    .iconQtd {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-top: -35px;
-      margin-left: 270px;
-      padding: 0;
-    }
-    .iconDiminuirItem {
-      border: solid 1px;
-      margin-right: 5px;
-    }
-    .iconAumentarItem {
-      margin-left: 5px;
-    }
-    .finalizar {
-      border: solid 2px;
-    }
+  .total {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -10px;
+    font-weight: 900;
   }
+  .finalizar {
+    margin-top: -20px;
+    border: solid 2px;
+  }
+  .register {
+    margin-top: 7px;
+    display: inline-block;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+  .register .formInput {
+    margin-top: -53px;
+  }
+  .register .formInput .texto {
+    margin-top: -3px;
+  }
+  .register .formInput button {
+    margin-top: 2px;
+  }
+}

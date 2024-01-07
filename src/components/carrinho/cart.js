@@ -1,6 +1,10 @@
 import React from "react";
-import '../carrinho/cart.css';
 import Home from "../home/home";
+import Cadastro from "../cadastro/cadastro";
+//import { Link } from "react-router-dom";
+import '../carrinho/cart.css';
+
+
 
 function Carrinho({ carrinhoItens = [], setCarrinhoItens }) {
   const handleDiminuirQuantidade = (index) => {
@@ -16,6 +20,7 @@ function Carrinho({ carrinhoItens = [], setCarrinhoItens }) {
     setCarrinhoItens(updatedCarrinho);
   };
 
+
   const handleAumentarQuantidade = (index) => {
     const updatedCarrinho = [...carrinhoItens];
     const item = updatedCarrinho[index];
@@ -24,8 +29,19 @@ function Carrinho({ carrinhoItens = [], setCarrinhoItens }) {
   };
 
   const handleFinalizarCompra = () => {
-    alert('Pedido confirmado! Obrigado por comprar conosco!');
-    setCarrinhoItens([]);
+
+    if (carrinhoItens.length > 0) {
+      const mensagemPedido = carrinhoItens.map((item) => `${item.nome} (Quantidade: ${item.quantidade}, Preço: R$${item.preco.toFixed(2)})`).join('\n');
+
+      const linkWhatsapp = `https://wa.me/+5511967225300?text=${encodeURIComponent(
+        `Pedido:\n${mensagemPedido}\nTotal: R$${isNaN(totalCarrinho) ? 0 : totalCarrinho.toFixed(2)}`
+      )}`;
+      window.open(linkWhatsapp, "_blank");
+    }else {
+      alert('Adicione algum produto ao carrinho!');
+    }
+    //setCarrinhoItens([]);
+    //*window.location.href = "/cadastro";
   };
 
   const totalCarrinho = carrinhoItens
@@ -42,7 +58,7 @@ function Carrinho({ carrinhoItens = [], setCarrinhoItens }) {
       <Home/>
     </div>
 
-      <h2>Carrinho</h2>
+      <h3>Carrinho</h3>
       <ul>
         {carrinhoItens.map((item, index) => (
           <li key={index}>
@@ -51,7 +67,7 @@ function Carrinho({ carrinhoItens = [], setCarrinhoItens }) {
             <p className="preco">R${typeof item.preco === 'number' ? item.preco.toFixed(2) : 0}</p>
             <div className="iconQtd">
               <button className="iconDiminuirItem" onClick={() => handleDiminuirQuantidade(index)}>-</button>
-              <span>{item.quantidade}</span>
+              <span className="qtd">{item.quantidade}</span>
               <button className="iconAumentarItem" onClick={() => handleAumentarQuantidade(index)}>+</button>
             </div>
           </li>
@@ -59,7 +75,10 @@ function Carrinho({ carrinhoItens = [], setCarrinhoItens }) {
         ))}
       </ul>
       <p className="total">Total: R${isNaN(totalCarrinho) ? 0 : totalCarrinho.toFixed(2)}</p>
-      <button className="finalizar" onClick={handleFinalizarCompra}>Confirmar o pedido</button>
+          {/*<button className="finalizar" onClick={handleFinalizarCompra}>Confirmar o pedido</button>*/}
+        <div className="register">
+          <Cadastro cadastroItens={carrinhoItens} setCarrinhoItens={setCarrinhoItens} handleEnviarPedido={handleFinalizarCompra}/>
+        </div>
     </div>
   );
 }
