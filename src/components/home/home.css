@@ -90,7 +90,7 @@ img {
     color: #ffffff;
     font-family: "Inter-Regular", Helvetica;
     font-weight: 600;
-    margin-right: -52px;
+    margin-right: -58.3px;
 }
 
 @media screen and (max-width: 1024px) and (min-width: 900px) {
@@ -213,7 +213,7 @@ img {
         margin-top: 55px;
         display: flex;
         width: 100%;
-        margin-left: 25px;
+        margin-left: 30px;
     }
     .zap {
         top: 10px;
@@ -236,5 +236,6 @@ img {
         margin-top: -7px;
         border-bottom: solid 3px #ffffff;
     }
+    
 
 }

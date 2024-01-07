@@ -31,9 +31,9 @@ function Carrinho({ carrinhoItens = [], setCarrinhoItens }) {
   const handleFinalizarCompra = () => {
 
     if (carrinhoItens.length > 0) {
-      const mensagemPedido = carrinhoItens.map((item) => `${item.nome} (Quantidade: ${item.quantidade}, Preço: R$${item.preco.toFixed(2)})`).join('\n');
+      const mensagemPedido = carrinhoItens.map((item) => `${item.nome} (Quantidade: ${item.quantidade}, Preço: R$${item.preco.toFixed(2)} Valor Total: R$${isNaN(totalCarrinho)})`).join('\n');
 
-      const linkWhatsapp = `https://wa.me/+5511967225300?text=${encodeURIComponent(
+      const linkWhatsapp = `https://wa.me/+5511957733587?text=${encodeURIComponent(
         `Pedido:\n${mensagemPedido}\nTotal: R$${isNaN(totalCarrinho) ? 0 : totalCarrinho.toFixed(2)}`
       )}`;
       window.open(linkWhatsapp, "_blank");

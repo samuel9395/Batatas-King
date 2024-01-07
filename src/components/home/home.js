@@ -8,7 +8,7 @@ import "../home/home.css";
 
 function Home({ toggleCarrinho, totalItens }) {
 
-const numeroWhatsapp = "+5511967225300"; 
+const numeroWhatsapp = "+5511957733587"; 
 const mensagem = "Olá, gostaria de fazer um pedido direto.\nGostaria de ver o cardápio por favor...";
 const linkWhatsapp = `https://wa.me/${numeroWhatsapp}?text=${encodeURIComponent(mensagem)}`;
 
