@@ -45,7 +45,7 @@ export default function Cadastro({ cadastroItens,setCarrinhoItens, handleEnviarP
               )
               .join('\n');
             if (cep.length === 8){
-            const mensagemCadastro = `Dados do cliente;\n Nome: ${nome}\nTelefone: ${telefone}\nEndereço: ${rua}, n°${numero}\n\nDetalhes do Pedido:\n${mensagemPedido}`;
+            const mensagemCadastro = `Dados do cliente;\nNome: ${nome}\nTelefone: ${telefone}\nEndereço: ${rua}, n°${numero}\n\nDetalhes do Pedido:\n${mensagemPedido}`;
       
             const linkWhatsapp = `https://wa.me/+5511967225300?text=${encodeURIComponent(mensagemCadastro)}`;
             window.open(linkWhatsapp, '_blank');

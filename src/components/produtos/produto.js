@@ -2,7 +2,7 @@ import React from "react";
 import dadoProdutos from "./dadosProdutos";
 import Add from "../../assets/imagens/add.png";
 import '../produtos/produto.css';
-import Check from "../../assets/check/check";
+import Check from "../../components/check/check";
 
 // ...
 
